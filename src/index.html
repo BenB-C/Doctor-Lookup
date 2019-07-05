@@ -10,18 +10,18 @@
       Find a Doctor by
       <select id="search-type">
         <option value="name">name</option>
-        <option value="issue">medical issue</option>
+        <option value="medical issue">medical issue</option>
       </select>
     </p>
     <input id="query" type="text">
     <button type="submit">Show doctors</button>
   </form>
   <div id="search-results">
-    <p>You searched for: <span id="query-display"></span></p>
-    <p><span id="number-of-results"></span> results</p>
+    <p>You searched for: <span class="query-display"></span></p>
+    <p id="number-of-results"></p>
     <ol id="doctors">
-
     </ol>
   </div>
+  <p id="no-results">No doctors where found matching "<span class="query-display"></span>"</p>
 </body>
 </html>

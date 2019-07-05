@@ -1,0 +1,7 @@
+#search-results, #no-results {
+  display: none;
+}
+
+body, ul {
+  padding: 10px;
+}
