@@ -32,14 +32,15 @@ $(document).ready(() => {
           let practicesListStr = "";
           doctor.practices.forEach(practice => {
             practicesListStr += `<div class="practice">`;
-            let address = "practice.visit_address.street"
-            if (practice.visit_address.street2){
-              address += " " + practice.visit_address.street2;
+            let addressData = practice.visit_address;
+            let addressString = addressData.street;
+            if (addressData.street2){
+              addressString += " " + addressData.street2;
             }
-            address += `${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}`;
+            addressString += `${addressData.city}, ${addressData.state} ${addressData.zip}`;
 
             practicesListStr += `<span class="practice-name">${practice.name}</span><br>`;
-            practicesListStr += `${address}<br>`;
+            practicesListStr += `${addressString}<br>`;
             practicesListStr += `${formatPhoneNumber(practice.phones[0].number)}<br>`;
             if (practice.website) {
               practicesListStr += `<a href="${practice.website}">${practice.website}</a><br>`;
