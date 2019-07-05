@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Doctor Lookup</title>
-  </head>
-  <body>
+<head>
+  <title>Doctor Lookup</title>
+</head>
+<body>
+  <h1>Doctor Lookup</h1>
+  <form id="doctor-search">
+    <p>
+      Find a Doctor by
+      <select id="search-type">
+        <option value="name">name</option>
+        <option value="issue">medical issue</option>
+      </select>
+    </p>
+    <input id="query" type="text">
+    <button type="submit">Show doctors</button>
+  </form>
+  <div id="search-results">
+    <p>You searched for: <span id="query-display"></span></p>
+    <p><span id="number-of-results"></span> results</p>
+    <ol id="doctors">
 
-  </body>
+    </ol>
+  </div>
+</body>
 </html>
