@@ -31,19 +31,23 @@ $(document).ready(() => {
           // Generate string of list items for the doctor's practices
           let practicesListStr = "";
           doctor.practices.forEach(practice => {
+            practicesListStr += `<div class="practice">`;
             let address = `${practice.visit_address.street} ${practice.visit_address.street2}, ${practice.visit_address.city}, ${practice.visit_address.state} ${practice.visit_address.zip}`;
 
-            practicesListStr += practice.name + "<br>";
-            practicesListStr += address + "<br>";
-            practicesListStr += formatPhoneNumber(practice.phones[0].number) + "<br>";
-            practicesListStr += practice.website + "<br>";
+            practicesListStr += `<span class="practice-name">${practice.name}</span><br>`;
+            practicesListStr += `${address}<br>`;
+            practicesListStr += `${formatPhoneNumber(practice.phones[0].number)}<br>`;
+            if (practice.website) {
+              practicesListStr += `<a href="${practice.website}">${practice.website}</a><br>`;
+            }
             practicesListStr += (practice.accepts_new_patients ? "A" : "Not a") + "ccepting new patients<br>";
+            practicesListStr += `</div>`;
           });
           // Add html to the DOM for the doctor and each practice
           $("#doctors").append(`
             <li>
-              ${doctor.profile.first_name} ${doctor.profile.middle_name} ${doctor.profile.last_name}<br>
-              Practices:<br>
+              <span class="doctor-name">${doctor.profile.first_name} ${doctor.profile.middle_name} ${doctor.profile.last_name}</span><br>
+              <em>Practices:</em><br>
               <ul>
                 ${practicesListStr}
               </ul>

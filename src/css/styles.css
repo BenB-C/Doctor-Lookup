@@ -2,6 +2,18 @@
   display: none;
 }
 
-body, ul {
+body {
   padding: 10px;
+}
+
+.practice {
+  margin-bottom: 10px;
+}
+
+.practice-name {
+  font-style: italic;
+}
+
+.doctor-name {
+  color: blue;
 }
