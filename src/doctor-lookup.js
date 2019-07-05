@@ -1,5 +1,4 @@
 export default class DoctorLookup {
-  // Returns a list of doctors who treat the given medical issue
   getDoctorsByIssue(issue) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
@@ -15,4 +14,9 @@ export default class DoctorLookup {
       request.send();
     });
   }
+
+  getDoctorsByName(name) {
+    return new Promise(function(resolve, reject) {
+
+  });
 }
