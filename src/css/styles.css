@@ -1,5 +1,6 @@
-#search-results, #no-results {
+#search-results, #no-results, #error-display {
   display: none;
+  margin-top: 15px;
 }
 
 body {

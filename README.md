@@ -15,8 +15,7 @@ A website where users may enter a medical issue (ie: “sore throat”, "rash", 
 | A user should be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query. | Sore throat | A list of doctors in the Portland area that can treat a sore throat |
 | A user should be able to to enter a name to receive a list of doctors in the Portland area that fit the search query. If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients. | Shane Kyong Kim | Shane Kyong Kim<br> 10819 SE Stark St, 200<br> Portland, OR 97216<br> 503-255-2291<br> https://www.ehnpc.com/dr-kim-cornea-surgeon-portland.htm#tab-1<br> Accepting new patients: Yes |
 |If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. (This is not an error so it should be handled separately from any errors.)| Doctor Strangelove | No doctors where found matching "Doctor Strangelove" |
-| If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is. | API call resulting in a 404 error | Error: 404 (Not Found)
- |
+| If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is. | API call resulting in a 404 error | Error: 404 (Not Found) |
 
 ## Setup/Installation Requirements
 

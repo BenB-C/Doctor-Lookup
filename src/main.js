@@ -11,22 +11,22 @@ $(document).ready(() => {
     event.preventDefault();
     $("#search-results").hide();
     $("#no-results").hide();
+    $("#error-display").hide();
     $("#doctors").empty();
 
     let searchType = $("select#search-type").val();
     let query = $("input#query").val();
     let getDoctorsPromise = (searchType === "name" ? doctorLookup.getDoctorsByName : doctorLookup.getDoctorsByIssue);
+    let promise = getDoctorsPromise(query);
 
-    getDoctorsPromise(query).then((response) => {
-      console.log("responce received");
+    promise.then(response => {
       let doctors = JSON.parse(response).data;
       let numberOfResults = doctors.length;
       $("#number-of-results").text(numberOfResults + " result" + (numberOfResults !== 1? "s":""));
       $(".query-display").text(query);
       if (numberOfResults === 0) {
         $("#no-results").show();
-      }
-      else {
+      } else {
         doctors.forEach(doctor => {
           // Generate string of list items for the doctor's practices
           let practicesListStr = "";
@@ -61,12 +61,13 @@ $(document).ready(() => {
         });
       }
       $("#search-results").show();
-
+    }, error => {
+      $("#error-display").text(`There was an error processing your request: ${error.message}`);
+      $("#error-display").show();
     });
   });
 });
 
 function formatPhoneNumber(number) {
   return "(" + number.substring(0,3) + ") " + number.substring(3,6) + "-" + number.substring(6);
-
 }
