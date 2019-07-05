@@ -1,0 +1,52 @@
+{
+  "name": "doctor-lookup",
+  "version": "1.0.0",
+  "description": "A website where users may enter a medical issue (ie: “sore throat”, \"rash\", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue.",
+  "main": "main.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "build": "webpack --mode development",
+    "start": "npm run build; webpack-dev-server --open --mode development",
+    "lint": "eslint src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benb-c/doctor-lookup.git"
+  },
+  "author": "Benjamin Bennett-Cauchon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bcauchon/doctor-lookup/issues"
+  },
+  "homepage": "https://github.com/bcauchon/doctor-lookup#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
+    "dotenv-webpack": "^1.7.0",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.6",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^2.99.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-jquery": "^0.2.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.13",
+    "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.0"
+  }
+}
