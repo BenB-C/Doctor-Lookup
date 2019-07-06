@@ -21,8 +21,8 @@ A website where users may enter a medical issue (ie: “sore throat”, "rash", 
 
 * Visit the BetterDoctor API site https://developer.betterdoctor.com/ and click “Get a free API key”.
 * Follow the instructions to get your API key.
-* Clone or download the repository, and add a file named ".env" with the line "API_KEY = [your api key]" to the project's root directory.
-* Navigate to the project's local directory in a command line terminal and enter the commands "npm install" and "npm run start".
+* Clone or download the repository, and add a file named ".env" containing the text "exports.apiKey = [your api key]" to the project's root directory.
+* Navigate to the project's local directory in a command line terminal and enter the commands "npm install" and then "npm run start".
 
 ## Known Bugs
 
@@ -30,7 +30,7 @@ There are no known bugs at this time.
 
 ## Support and contact details
 
-If you find a bug, run into any issues, or have questions, ideas or concerns please feel free to submit an issue for the project here on GitHub or email me at bauchon@gmail.com.
+If you find a bug, run into any issues, or have questions, ideas or concerns please feel free to submit an issue for the project here on GitHub or email me at benjamin.bennett-cauchon@gmail.com.
 
 ## Technologies Used
 
