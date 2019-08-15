@@ -30,7 +30,7 @@ There are no known bugs at this time.
 
 ## Support and contact details
 
-If you find a bug, run into any issues, or have questions, ideas or concerns please feel free to submit an issue for the project here on GitHub or email me at benjamin.bennett-cauchon@gmail.com.
+If you find a bug, run into any issues, or have questions, ideas or concerns please feel free to submit an issue for the project here on GitHub.
 
 ## Technologies Used
 
